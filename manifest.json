@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "iracing-wr",
+    "version": "1.0",
+    "homepage_url": "https://github.com/scullionw/iracing-wr/",
+    "description": "Shows % off from WR times on iracing.",
+    "icons": {
+        "128": "icons/iracing-wr-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://members.iracing.com/membersite/member/worldrecords.jsp"
+            ],
+            "js": [
+                "arrive.min.js",
+                "wr.js"
+            ]
+        }
+    ],
+    "applications": {
+        "gecko": {
+            "id": "@iracing-wr-extension"
+        }
+    }
+}
